@@ -7,7 +7,7 @@ This corpus anaylsis project:
 -  Runs LDA (Latent Dirichlet Allocation) topic modeling
 -  Experiments with the effects of text normalization on the entire corpus analysis
 
-# Files
+# Files:
 The files in this repository include:
 - "hw-1.py" the python script
 - "Report.pdf" the report pdf
