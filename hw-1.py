@@ -128,10 +128,9 @@ def main():
                 count = labelCount[0][word] + labelCount[1][word] + labelCount[2][word] + labelCount[3][word]
                 otherLabelCount[label][word] += count
 
-    # Printing out the average number of tokens per document per category
+    # Calculating the average number of tokens per document per category
     tokensPerDocument = [0, 0, 0, 0, 0]
     documentCount = [0, 0, 0, 0, 0]
-    print("\nAverage number of tokens per document per category:")
     for label, wordCounts in labelCount.items():
         if label == 0:
             tokensPerDocument[0] = sum(wordCounts.values())
@@ -156,11 +155,17 @@ def main():
         else:  # labels[x] == 4:
             documentCount[4] += 1
 
+    # Printing the average number of tokens per document per category
+    print("")
     for label in labelCount.keys():
         average = (tokensPerDocument[label] / documentCount[label])
-        print(f"Average Tokens for {actualLabels[label]}: {average:.2f}")
+        print(f"Average Tokens per document for {actualLabels[label]}: {average:.2f}")
     print("")
 
+    # Printing out the number of documents in each label
+    for label in labelCount.keys():
+        print(f"Number of documents for {actualLabels[label]}: {documentCount[label]}")
+    print("")
 
     # Begin Loglikelihood calculation
 
