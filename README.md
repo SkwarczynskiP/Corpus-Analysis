@@ -10,7 +10,7 @@ This corpus anaylsis project:
 # Files:
 The files in this repository include:
 - "hw-1.py" the python script
-- "Report.pdf" the report pdf
+- "Report-hw1.pdf" the report pdf
 
 # How to Run:
 1. Download the files
