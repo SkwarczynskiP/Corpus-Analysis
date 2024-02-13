@@ -9,10 +9,10 @@ This corpus anaylsis project:
 
 # Files
 The files in this repository include:
-    - "hw-1.py" the python script
-    - "Report.pdf" the report pdf
+- "hw-1.py" the python script
+- "Report.pdf" the report pdf
 
 # How to Run:
-    1. Download the files
-    2. Open the terminal and change directories to the location of the downloaded files
-    3. Type the command "py hw-1.py" to run
+1. Download the files
+2. Open the terminal and change directories to the location of the downloaded files
+3. Type the command "py hw-1.py" to run
