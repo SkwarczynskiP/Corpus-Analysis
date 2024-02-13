@@ -74,7 +74,7 @@ def main():
         processed_text = normalize(text)
         normalizedText.append(processed_text)
 
-    # Bag of words creation
+    # Bag of words creation (referenced https://www.geeksforgeeks.org/bag-of-words-bow-model-in-nlp/)
     vocab = set()
     bow = []
     for text in normalizedText:
@@ -177,7 +177,7 @@ def main():
         for token in vocab:
             loglikelihood[label][token] = loglikelihoodFirstTerm[label][token] - loglikelihoodSecondTerm[label][token]
 
-    # Sort the loglikelihood ratios
+    # Sort the loglikelihood ratios (referenced https://copilot.microsoft.com/ for how to use the sorted function)
     sortedLoglikelihoods = {}
     for label in labelCount.keys():
         sortedLoglikelihoods[label] = sorted(loglikelihood[label].items(), key=lambda item: item[1], reverse=True)
@@ -191,6 +191,8 @@ def main():
     # End of Loglikelihood calculation
 
     # Beginning of the LDA classification
+    # (referenced https://www.geeksforgeeks.org/nlp-gensim-tutorial-complete-guide-for-beginners/
+    # for how to use gensim library)
     posts = [x.split(' ') for x in normalizedText]
     id2word = corpora.Dictionary(posts)
     corpus = [id2word.doc2bow(text) for text in posts]
